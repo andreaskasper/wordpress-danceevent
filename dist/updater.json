@@ -1,11 +1,11 @@
 {
     "name": "Dance Event Plugin",
-    "version": "0.1.103",
+    "version": "0.1.104",
     "download_url": "https:\/\/raw.githubusercontent.com\/andreaskasper\/wordpress-danceevent\/main\/dist\/goo1-danceevent.zip",
     "homepage": "https:\/\/github.com\/andreaskasper\/",
     "requires": "3.5",
     "tested": "5.8.1",
-    "last_updated": "2021-09-11 23:23:19",
+    "last_updated": "2021-09-11 23:39:56",
     "upgrade_notice": "First release",
     "author": "Andreas Kasper",
     "author_homepage": "https:\/\/scoring.dance\/",
@@ -13,6 +13,7 @@
         "description": "<p>The Wordpress Plugin implement all the functions you need to organize your dance event.<\/p>",
         "installation": "Please contact Andreas Kasper for the install and setup. The plugin is a customized plugin and not available in the official store!",
         "changelog": "<h2>Changelog<\/h2><p>Basic Shortcodes<\/p>",
+        "Shortcodes": "<h2>Shortcodes<\/h2><table><tr><td>danceevent_livestream<\/td><td>embed a livestream from 5678.video in your website<\/td><\/tr><tr><td>wcs_livestream<\/td><td>embed a livestream from 5678.video in your website<\/td><\/tr><\/table>",
         "Kontakt_Andreas": ""
     },
     "icons": {

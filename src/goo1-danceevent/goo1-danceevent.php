@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/andreaskasper/
  * Description: Implement important functions and shortcodes for your danceevent
  * Author: Andreas Kasper
- * Version: 0.1.103
+ * Version: 0.1.104
  * Author URI: https://github.com/andreaskasper/
  * Network: True
  * Text Domain: danceevent
