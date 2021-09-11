@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: danceevent Plugin
+ * Plugin Name: Danceevent Pro
  * Plugin URI: https://github.com/andreaskasper/
  * Description: Implement important functions and shortcodes for your danceevent
  * Author: Andreas Kasper
- * Version: 0.1.102
+ * Version: 0.1.103
  * Author URI: https://github.com/andreaskasper/
  * Network: True
  * Text Domain: danceevent
  */
 
 spl_autoload_register(function ($class_name) {
-	if (substr($class_name,0,26) != "plugins\\goo1\\danceevent\\") return false;
+	if (substr($class_name,0,24) != "plugins\\goo1\\danceevent\\") return false;
 	$files = array(
 		__DIR__."/classes/".str_replace("\\", DIRECTORY_SEPARATOR,substr($class_name, 24)).".php"
 	);
@@ -21,6 +21,7 @@ spl_autoload_register(function ($class_name) {
 			return true;
 		}
 	}
+	die(__DIR__."/classes/".str_replace("\\", DIRECTORY_SEPARATOR,substr($class_name, 24)).".php");
 	return false;
 });
 
