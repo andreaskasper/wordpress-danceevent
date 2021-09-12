@@ -7,9 +7,9 @@
  * @since 1.0.0
  */
 
-namespace plugins\goo1\scoringdance\elementor\widgets;
+namespace plugins\goo1\danceevent\elementor\widgets;
 
-class Results extends \Elementor\Widget_Base {
+class Livestream extends \Elementor\Widget_Base {
 	/**
 	 * Get widget name.
 	 *
@@ -21,7 +21,7 @@ class Results extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'scoring-dance-results';
+		return 'goo1-danceevent-livestream';
 	}
 
 	/**
@@ -35,7 +35,7 @@ class Results extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'scoring.dance Results', 'plugin-name' );
+		return __( 'Livestream', 'plugin-name' );
 	}
 
 	/**
@@ -49,7 +49,7 @@ class Results extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'fa fa-list-ol';
+		return 'fa fas fa-camera';
 	}
 
 	/**
@@ -63,7 +63,7 @@ class Results extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return ['andreaskasper', 'scoring.dance', 'goo1'];
+		return ['andreaskasper', 'danceevent', 'goo1'];
 	}
 
 	/**
@@ -85,7 +85,7 @@ class Results extends \Elementor\Widget_Base {
 		);
 
 
-		$arr = array();
+		/*$arr = array();
         $json = json_decode(file_get_contents("https://scoring.dance/api/wpplugin.events.json"),true);
         foreach ($json["result"] as $row) {
             $arr[$row["id"]] = $row["name"];
@@ -100,7 +100,7 @@ class Results extends \Elementor\Widget_Base {
 				'default' => null,
 				'options' => $arr,
 			]
-		);
+		);*/
 
         $this->end_controls_section();
 
@@ -112,7 +112,7 @@ class Results extends \Elementor\Widget_Base {
 			]
 		);
 
-        $arr = array(
+        /*$arr = array(
             "light" => __("light", 'plugin-domain'),
             "dark" => __("dark", 'plugin-domain'),
             "custom" => __("custom", 'plugin-domain')
@@ -126,7 +126,7 @@ class Results extends \Elementor\Widget_Base {
 				'default' => null,
 				'options' => $arr,
 			]
-		);
+		);*/
         
 
 		$this->end_controls_section();
@@ -142,6 +142,7 @@ class Results extends \Elementor\Widget_Base {
 	 */
     protected function render() {
 		$settings = $this->get_settings_for_display();
-        echo do_shortcode('[scoring_dance_results event="'.$settings["event"].'" theme="'.$settings["theme"].'"]');
+		$html = \plugins\goo1\danceevent\shortcodes::render_livestream(array(), "");
+        echo $html;
 	}
 }

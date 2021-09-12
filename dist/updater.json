@@ -1,11 +1,11 @@
 {
     "name": "Dance Event Plugin",
-    "version": "0.1.104",
+    "version": "0.1.105",
     "download_url": "https:\/\/raw.githubusercontent.com\/andreaskasper\/wordpress-danceevent\/main\/dist\/goo1-danceevent.zip",
     "homepage": "https:\/\/github.com\/andreaskasper\/",
     "requires": "3.5",
     "tested": "5.8.1",
-    "last_updated": "2021-09-11 23:39:56",
+    "last_updated": "2021-09-12 00:51:44",
     "upgrade_notice": "First release",
     "author": "Andreas Kasper",
     "author_homepage": "https:\/\/scoring.dance\/",
