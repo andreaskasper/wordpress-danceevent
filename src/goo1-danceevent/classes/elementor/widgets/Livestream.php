@@ -84,23 +84,31 @@ class Livestream extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			"domain",
+			[
+				'label' => __( 'Domain', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => __( 'default: auto', 'plugin-domain' ),
+			]
+		);
 
-		/*$arr = array();
-        $json = json_decode(file_get_contents("https://scoring.dance/api/wpplugin.events.json"),true);
-        foreach ($json["result"] as $row) {
-            $arr[$row["id"]] = $row["name"];
-        }
-        asort($arr);
+
+		$arr = array(
+			"auto" => "auto",
+			"enUS" => "English",
+			"deDE" => "German"
+		);
 
 		$this->add_control(
-			'event',
+			"lang",
 			[
-				'label' => __( 'Event', 'plugin-domain' ),
+				'label' => __( 'Language', 'plugin-domain' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => null,
 				'options' => $arr,
 			]
-		);*/
+		);
 
         $this->end_controls_section();
 
