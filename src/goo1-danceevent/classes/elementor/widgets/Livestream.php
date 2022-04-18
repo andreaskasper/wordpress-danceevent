@@ -49,7 +49,7 @@ class Livestream extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'fa fas fa-camera';
+		return 'eicon-video-camera';
 	}
 
 	/**
@@ -149,6 +149,10 @@ class Livestream extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
     protected function render() {
+		if (\Elementor\Plugin::$instance->editor->is_edit_mode()) {
+			echo('<div style="position: relative; background: black; width: 100%; height: 0; padding-bottom:56.25%; border: 1px solid #fff;"><div style="position: absolute; width: 100%; height: 100%; color: white; text-align: center; padding-top: 10%;">Livestream</div></div>');
+			return;
+		}
 		$settings = $this->get_settings_for_display();
 		$html = \plugins\goo1\danceevent\shortcodes::render_livestream(array(), "");
         echo $html;
